@@ -65,9 +65,13 @@ $(document).ready(function () {
         showCart(cart);
     })
 
-    $('.delete-cart').click(function () {
+    $('body').on('click' , '.delete-cart',function () {
+
         let id = $(this).attr('id');
-        cart.splice(id, 0);
+        cart.splice(id, 1);
+        html1 = "";
+        total = 0;
+        showCart(cart);
     });
 })
 
